@@ -11,12 +11,9 @@ export default function Callback() {
   useEffect(() => {
     const token = getTokenFromUrl();
     if (token) {
-      // Store token in localStorage
       localStorage.setItem('spotify_access_token', token);
-      // Redirect to dashboard
       router.push('/dashboard');
     } else {
-      // Redirect back to home if no token
       router.push('/');
     }
   }, [router]);
