@@ -159,7 +159,7 @@ const FestivalPoster = React.forwardRef<HTMLDivElement, PosterProps>(
             
             <div className="flex items-center justify-center gap-2">
               <Fingerprint className="w-4 h-4 text-violet-400" />
-              <span className="text-xs text-violet-500">beatprint.com</span>
+              <span className="text-xs text-violet-500">beatprint by <a href='https://dionpamungkas.com' target='_blank'>Dion Pamungkas</a></span>
             </div>
           </div>
 
