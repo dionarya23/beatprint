@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎵 Beatprint - Your Musical Festival Poster Generator
 
-## Getting Started
+Generate beautiful, festival-style posters based on your Spotify listening history. Turn your music taste into a personalized festival lineup where your top artists are the headliners!
 
-First, run the development server:
+![Beatprint Preview](public/preview.png)
 
+## ✨ Features
+
+- 🎨 Festival-style poster generation
+- 🎵 Integration with Spotify API
+- 👤 Personal listening statistics
+- 🔄 Real-time data updates
+- 📱 Responsive design
+- 💫 Beautiful animations
+- 📥 Download posters as images
+- 📲 Easy social media sharing
+
+## 🚀 Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Spotify Web API
+- Lucide Icons
+- HTML2Canvas
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/dionarya23/beatprint.git
+cd beatprint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file in the root directory with your Spotify API credentials:
+```env
+NEXT_PUBLIC_SPOTIFY_CLIENT_ID=your_spotify_client_id
+NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## 🔑 Spotify API Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+2. Create a new application
+3. Add `http://localhost:3000` to Redirect URIs
+4. Copy your Client ID to the `.env.local` file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+beatprint/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── globals.css
+│   │   └── dashboard/
+│   │       └── page.tsx
+│   ├── components/
+│   │   └── FestivalPoster.tsx
+│   └── lib/
+│       ├── spotify.ts
+│       └── utils.ts
+├── public/
+├── package.json
+└── README.md
+```
 
-## Deploy on Vercel
+## 🛠️ Key Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### FestivalPoster
+The main poster component that displays your music data in a festival lineup style.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Dashboard
+Handles authentication and data fetching from Spotify API.
+
+### Spotify Integration
+Manages API calls and data processing for your Spotify statistics.
+
+## 📱 Features Breakdown
+
+### Authentication
+- Spotify OAuth 2.0 integration
+- Secure token handling
+- Automatic token refresh
+
+### Poster Generation
+- Festival-style layout
+- Dynamic headliner sizing
+- Genre categorization
+- Special performances section
+- Interactive elements
+
+### Export Options
+- High-quality image download
+- Social media sharing
+- Link copying
+
+## 🎨 Customization
+
+The poster design can be customized by modifying the Tailwind classes in `FestivalPoster.tsx`. Main customization points include:
+
+- Color schemes
+- Typography
+- Layout
+- Animations
+- Gradients
+
+## 🚀 Deployment
+
+Deploy to Vercel:
+
+```bash
+vercel
+```
+
+Remember to add your environment variables to your deployment platform.
+
+## 📝 Usage
+
+1. Visit the website
+2. Connect your Spotify account
+3. Wait for your data to load
+4. Download or share your generated poster
+5. Enjoy your personalized festival lineup!
+
+## ⚙️ Development
+
+Running tests:
+```bash
+npm run test
+```
+
+Building for production:
+```bash
+npm run build
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Spotify Web API
+- Next.js Team
+- Tailwind CSS Team
+- All Contributors
+
+## 👤 Author
+
+Dion Pamungkas
+- GitHub: [@yourusername](https://github.com/dionarya23)
+
+## ✨ Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+Made with ❤️ by Dion Pamungkas
