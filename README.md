@@ -126,11 +126,6 @@ Remember to add your environment variables to your deployment platform.
 
 ## ⚙️ Development
 
-Running tests:
-```bash
-npm run test
-```
-
 Building for production:
 ```bash
 npm run build
@@ -148,10 +143,5 @@ npm run build
 Dion Pamungkas
 - GitHub: [@dionarya23](https://github.com/dionarya23)
 
-## ✨ Show your support
-
-Give a ⭐️ if this project helped you!
-
 ---
-
 Made with ❤️ by Dion Pamungkas
