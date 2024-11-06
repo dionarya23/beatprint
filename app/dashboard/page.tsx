@@ -19,7 +19,7 @@ export default function Dashboard() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [userData, setUserData] = useState<UserData | null>(null);
+  const [userData, setUserData] = useState<UserData | any>(null);
   const posterRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
